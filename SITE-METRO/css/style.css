@@ -183,7 +183,14 @@ hr {
 }
 
 
+.contato-fundo {
+    background-image: url(https://images.alphacoders.com/134/1346550.png);
+    background-repeat: no-repeat;
+}
 
+.contato-fundo .card {
+    box-shadow: none;
+}
 
 
 
@@ -345,6 +352,10 @@ footer {
 
 .posts-header p {
     padding: 20px 10px 0;
+}
+
+.posts-header h1, p {
+    margin-left: 7px;
 }
 
 .posts-area {
