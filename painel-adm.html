@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/favicon-metro.png" type="image/x-icon">
 </head>
-<body class="pagina-admin">
+<body class="pagina-admin" onclick="recuperarConteudo()">
     <nav class="container-fluid p-4">
         <div class="row">
             <div class="col-12">
@@ -69,7 +69,7 @@
                 <div class="col-md-4 text-center p-3">
                     <h4>Quem Somos</h4>
                     <div class="input-group m-3" style="width: 90%; margin: auto;">
-                        <textarea class="form-control mt-4" aria-label="With textarea" placeholder="Digite aqui o texto da seção"></textarea>
+                        <textarea class="form-control mt-4" aria-label="With textarea" placeholder="Digite aqui o texto da seção" id="inputQuemSomos"></textarea>
                     </div>
                 </div>
                 <div class="col-md-4  mt-3 ">
@@ -301,7 +301,7 @@
         </section>
         
     </main>
-    
+    <script src="js/admin.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
 </body>
 </html>

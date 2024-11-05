@@ -14,7 +14,7 @@ app.use(bodyParser.json())
 app.use(cookieParser())
 
 const corsOptions = {
-    origin: 'http://127.0.0.1:5500', // Permita esta origem
+    origin: 'http://127.0.0.1:5501', // Permita esta origem
     credentials: true // Permite que cookies sejam enviados
 }
 
