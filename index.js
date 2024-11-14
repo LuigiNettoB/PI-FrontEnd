@@ -8,13 +8,15 @@ const cookieParser = require("cookie-parser")
 const bodyParser = require("body-parser")
 require("dotenv").config()
 const User = require("./user")
+const axios = require('axios')
 
 const app = express()
 app.use(bodyParser.json())
 app.use(cookieParser())
+app.use(express.json())
 
 const corsOptions = {
-    origin: 'http://127.0.0.1:5501', // Permita esta origem
+    origin: 'http://127.0.0.1:5502', // Permita esta origem
     credentials: true // Permite que cookies sejam enviados
 }
 
@@ -51,9 +53,59 @@ app.post('/logout', (req, res) => {
 })
 
 const port = process.env.PORT || 3000
+//const port = 3000
 
 app.listen(port, ()=> {
     console.log(`Servidor rodando na Porta ${port}`)
 })
 
 require("./connection")  
+
+const mongoose = require('mongoose');
+
+// Definição do esquema de Postagem (Post)
+const PostSchema = new mongoose.Schema({
+    assunto: { type: String, required: true },
+    conteudo: { type: String, required: true },
+    data: { type: Date, default: Date.now }
+});
+
+const Post = mongoose.model('Post', PostSchema);
+
+// Rota para criar uma nova postagem
+app.post('/posts', async (req, res) => {
+    try {
+        const { assunto, conteudo } = req.body;
+        
+        // Cria um novo post com a data atual
+        const newPost = new Post({
+            assunto,
+            conteudo,
+            data: Date.now()  // Gera a data e hora atual em milissegundos
+        });
+
+        console.log('Novo post criado');
+        await newPost.save();
+
+        res.status(201).json(newPost);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+});
+
+
+// axios.post('http://127.0.0.1:3000/posts', {
+//     assunto: "",
+//     conteudo: ""
+// })
+// .then(response => console.log(response.data))
+// .catch(error => console.error(error));
+
+app.get('/posts', async (req, res) => {
+    try {
+        const posts = await Post.find().sort({ date: -1 });  // Ordena por data, da mais recente para a mais antiga
+        res.json(posts);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+});

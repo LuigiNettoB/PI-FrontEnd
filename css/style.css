@@ -196,6 +196,55 @@ iframe {
     box-shadow: none;
 }
 
+.botao-acessibilidade {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.botao-acessibilidade:hover {
+    background-color: #0056b3;
+}
+
+.btn1 {
+    top: 300px;
+}
+
+.btn2{
+    top: 370px;
+}
+
+.container-acessibilidade {
+    position: fixed;
+    top: 400px;
+    left: 20px; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.daltonismo {
+    background-color: #6b6b6b !important;
+}
+
+.nav-link-daltonismo {
+    color: #ffffff !important;
+}
+
+.fonte-maior {
+    font-size: 25px !important;
+}
+
 
 
 /* FOOTER */

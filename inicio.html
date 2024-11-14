@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <nav class="navbar col-12 navbar-expand-lg  position-fixed navbar-light bg-dark " data-bs-theme="dark" style="z-index: 999;">
+    <nav id="corNav" class="navbar col-12 navbar-expand-lg  position-fixed navbar-light bg-dark " data-bs-theme="dark" style="z-index: 999;">
         <div class="container-fluid col-11 m-auto navegacao">
             <img src="images/Matemática__1_-removebg-preview.png" alt="" class="logo-img">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -104,6 +104,10 @@
             </div>
         </div>
     </div>
+    <div class="container-acessibilidade">
+        <div class="btn btn-primary botao-acessibilidade btn1" id="botaoDaltonismo" onclick="alterarCor()"><i class="fa-solid fa-eye"></i></div>
+        <div class="btn btn-primary botao-acessibilidade btn2" onclick="aumentarFonte()"><i class="fa-solid fa-text-height"></i></div>
+    </div>
     <footer>
         <div id="footer_content">
             <div id="footer_contacts">
@@ -173,6 +177,7 @@
             2024 all rights reserved
         </div>
     </footer>
+    <script src="js/frontend.js"></script>
     <script src="js/admin.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
