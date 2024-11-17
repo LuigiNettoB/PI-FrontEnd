@@ -26,166 +26,18 @@
         </div>
         <div class="row mt-4">
             <div class="col-4 text-center">
-                <p><strong>Visitas ao site:</strong> <span id="numero-visitas">917</span></p>
+                <p id="contador"></p>
             </div>
             <div class="col-4 text-center">
                 <p><strong>Página mais visitada:</strong> <span id="numero-visitas">Início</span></p>
             </div>
             <div class="col-4 text-center">
-                <p><strong>Emails enviados: </strong> <span id="numero-visitas">14</span></p>
+                <p id="contador-clique"></p>
             </div>
         </div>
     </header>
     <hr>
     <main>
-        <section class="col-md-10 m-auto secao-inicio mt-4 mb-4">
-            <div class="row mb-2">
-                <h2 class="text-center">Início</h2>
-            </div>
-            <div class="row mt-4">
-                <div class="col-md-4 secao-inicio-carrossel p-3">
-                    <h4 class="text-center">Carrosel</h4>
-                    <div class="m-3">
-                        <label for="basic-url" class="form-label">Primeira Imagem:</label>
-                        <div class="input-group">
-                          <span class="input-group-text" id="basic-addon3">https://...</span>
-                          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                        </div>
-                    </div>
-                    <div class="m-3">
-                        <label for="basic-url" class="form-label">Segunda Imagem:</label>
-                        <div class="input-group">
-                          <span class="input-group-text" id="basic-addon3">https://...</span>
-                          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                        </div>
-                    </div>
-                    <div class="m-3">
-                        <label for="basic-url" class="form-label">Terceira Imagem:</label>
-                        <div class="input-group">
-                          <span class="input-group-text" id="basic-addon3">https://...</span>
-                          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center p-3">
-                    <h4>Quem Somos</h4>
-                    <div class="input-group m-3" style="width: 90%; margin: auto;">
-                        <textarea class="form-control mt-4" aria-label="With textarea" placeholder="Digite aqui o texto da seção" id="inputQuemSomos"></textarea>
-                    </div>
-                </div>
-                <div class="col-md-4  mt-3 ">
-                    <h4 class="text-center">Cards</h4>
-                    <div class="row">
-                        <div class="col-10 secao-card mt-3 m-3">
-                            <p><strong>Card 1</strong></p>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Título Card 1">
-                            </div>
-                            <div class="input-group">
-                                <textarea class="form-control" aria-label="With textarea" placeholder="Texto Card 1"></textarea>
-                              </div>
-                        </div>
-                        <div class="col-10 secao-card m-3">
-                            <p><strong>Card 2</strong></p>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Título Card 2">
-                            </div>
-                            <div class="input-group">
-                                <textarea class="form-control" aria-label="With textarea" placeholder="Texto Card 2"></textarea>
-                              </div>
-                        </div>
-                        <div class="col-10 secao-card m-3">
-                            <p><strong>Card 3</strong></p>
-                            <div class="input-group input-group-sm mb-3">
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Título Card 3">
-                            </div>
-                            <div class="input-group">
-                                <textarea class="form-control" aria-label="With textarea" placeholder="Texto Card 3"></textarea>
-                              </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <hr>
-        <section class="col-md-10 m-auto mt-4">
-            <div class="row">
-                <div class="col-12"><h2 class="text-center">Sobre</h2></div>
-            </div>
-            <div class="row">
-                <div class="col-12 p-5 painel-gerencia mb-3 mt-3">
-                    <div class="row">
-                        <div class="col-md">
-                            <h4>Foto Primeira Seção</h4>
-                            <div class="input-group">
-                                <span class="input-group-text" id="basic-addon3">https://...</span>
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                            </div>
-                        </div>
-                        <div class="col-md">
-                            <h4>Título Primeira Seção</h4>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Título">
-                            </div>
-                        </div>
-                        <div class="col-md">
-                            <h4>Conteúdo Primeira Seção</h4>
-                            <div class="input-group">
-                                <textarea class="form-control" aria-label="With textarea" placeholder="Conteúdo"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 p-5 painel-gerencia mb-3">
-                    <div class="row">
-                        <div class="col-md">
-                            <h4>Foto Segunda Seção</h4>
-                            <div class="input-group">
-                                <span class="input-group-text" id="basic-addon3">https://...</span>
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                            </div>
-                        </div>
-                        <div class="col-md">
-                            <h4>Título Segunda Seção</h4>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Título">
-                            </div>
-                        </div>
-                        <div class="col-md">
-                            <h4>Conteúdo Segunda Seção</h4>
-                            <div class="input-group">
-                                <textarea class="form-control" aria-label="With textarea" placeholder="Conteúdo"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 p-5 painel-gerencia mb-3">
-                    <div class="row">
-                        <div class="col-md">
-                            <h4>Foto Terceira Seção</h4>
-                            <div class="input-group">
-                                <span class="input-group-text" id="basic-addon3">https://...</span>
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                            </div>
-                        </div>
-                        <div class="col-md">
-                            <h4>Título Terceira Seção</h4>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Título">
-                            </div>
-                        </div>
-                        <div class="col-md">
-                            <h4>Conteúdo Terceira Seção</h4>
-                            <div class="input-group">
-                                <textarea class="form-control" aria-label="With textarea" placeholder="Conteúdo"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <hr>
         <section class="col-10 m-auto mt-3">
             <div class="row">
@@ -194,81 +46,84 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
-                    <h4>Endereço:</h4>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Endereço do Projeto">
+                <form action="" id="form-endereco">
+                    <div class="col-md-6 offset-md-3">
+                        <h4>Endereço:</h4>
+                        <div class="input-group mb-3">
+                            <input type="text" id="endereco" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Endereço do Projeto">
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <h4>Horários:</h4>
-                    <table class="table table-striped text-center">
-                        <thead>
-                            <tr>
-                                <th>Dia</th>
-                                <th>Horário</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Domingo</td>
-                                <td>
-                                    <div class="input-group input-group-sm mb-3">
-                                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
-                                      </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Segunda</td>
-                                <td>
-                                    <div class="input-group input-group-sm mb-3">
-                                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
-                                      </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Terça</td>
-                                <td>
-                                    <div class="input-group input-group-sm mb-3">
-                                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
-                                      </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Quarta</td>
-                                <td>
-                                    <div class="input-group input-group-sm mb-3">
-                                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
-                                      </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Quinta</td>
-                                <td>
-                                    <div class="input-group input-group-sm mb-3">
-                                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
-                                      </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Sexta</td>
-                                <td>
-                                    <div class="input-group input-group-sm mb-3">
-                                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
-                                      </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Sábado</td>
-                                <td>
-                                    <div class="input-group input-group-sm mb-3">
-                                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
-                                      </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                    <div class="col-md-6 offset-md-3">
+                        <h4>Horários:</h4>
+                        <table class="table table-striped text-center">
+                            <thead>
+                                <tr>
+                                    <th>Dia</th>
+                                    <th>Horário</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Domingo</td>
+                                    <td>
+                                        <div class="input-group input-group-sm mb-3">
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
+                                          </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Segunda</td>
+                                    <td>
+                                        <div class="input-group input-group-sm mb-3">
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
+                                          </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Terça</td>
+                                    <td>
+                                        <div class="input-group input-group-sm mb-3">
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
+                                          </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Quarta</td>
+                                    <td>
+                                        <div class="input-group input-group-sm mb-3">
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
+                                          </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Quinta</td>
+                                    <td>
+                                        <div class="input-group input-group-sm mb-3">
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
+                                          </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Sexta</td>
+                                    <td>
+                                        <div class="input-group input-group-sm mb-3">
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
+                                          </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Sábado</td>
+                                    <td>
+                                        <div class="input-group input-group-sm mb-3">
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
+                                          </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button type="submit" class="btn btn-outline-primary col-md-6 offset-md-3 mb-5">Alterar</button>
+                </form>
             </div>
         </section>
         <hr>
@@ -298,15 +153,79 @@
             </div>
         </section>
         <hr>
-        <section class="col-md-10 m-auto mt-5">
-            <div class="d-grid gap-2">
-                <button class="btn btn-primary mb-5" type="button">Atualizar Modificações</button>
-            </div>
-        </section>
         
     </main>
+    <script>
+        function atualizarContador() {
+            fetch('http://localhost:3000/get-visitas')  // Requisição para obter o número de visitas
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Número de visitas:', data.visitas);  // Verifique o que vem no console
+                    document.querySelector('#contador').textContent = `Número de visitas: ${data.visitas}`;
+                })
+                .catch(error => {
+                    console.error('Erro ao obter visitas:', error);
+                    document.querySelector('#contador').textContent = 'Erro ao carregar número de visitas.';
+                });
+        }
+
+        // Função para incrementar o contador de visitas ao carregar a página
+        function incrementarVisita() {
+            fetch('http://localhost:3000/incrementar-visita')  // Requisição para incrementar as visitas
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Visitas incrementadas:', data.visitas);  // Verifique se o contador foi incrementado
+                })
+                .catch(error => {
+                    console.error('Erro ao incrementar visitas:', error);
+                });
+        }
+
+        // Chamar as funções ao carregar a página
+        incrementarVisita();  // Incrementa a visita
+        atualizarContador();  // Atualiza o contador de visitas
+
+        function atualizarContadorClique() {
+            fetch('http://localhost:3000/get-cliques')
+                .then(response => response.json())
+                .then(data => {
+                    document.querySelector('#contador-clique').textContent = `Número de emails enviados: ${data.cliques}`;
+                })
+                .catch(error => {
+                    console.error('Erro ao obter número de cliques:', error);
+                    document.querySelector('#contador-clique').textContent = 'Erro ao carregar número de emails enviados.';
+                });
+        }
+
+        // Atualiza o contador ao carregar a página
+        atualizarContadorClique();
+
+        document.querySelector('#form-endereco').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const endereco = document.querySelector('#endereco').value;
+            
+            fetch('http://localhost:3000/salvar-endereco', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ endereco })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    alert(data.message);  // Exibe uma mensagem de sucesso
+                    document.querySelector('#endereco').value = ''; // Limpa o campo
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao salvar o endereço:', error);
+                alert('Erro ao salvar o endereço.');
+            });
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="js/admin.js"></script>
     <script src="js/frontend.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
