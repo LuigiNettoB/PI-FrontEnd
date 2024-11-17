@@ -63,7 +63,7 @@ async function loadPosts() {
         .filter(post => !isNaN(post.data)); // Remove posts com data inválida
     
     // Ordena os posts pela data do mais antigo para o mais recente
-    posts.sort((a, b) => a.data - b.data);
+    posts.sort((a, b) => b.data - a.data);
 
     postsContainer.innerHTML = '';  // Limpa os posts existentes
     posts.forEach(post => {
@@ -99,6 +99,11 @@ function aumentarFonte() {
         // Aplica o novo tamanho ao elemento
         elemento.style.fontSize = novoTamanhoFonte + 'px';
       });
+}
+
+function lerPaginaInteira() {
+    const textos = document.body.innerText;
+     responsiveVoice.speak(textos, "Portuguese Female");
 }
 
 //VERSÃO PEDRO

@@ -17,7 +17,7 @@ body {
 }
 
 .navbar {
-    padding: 27px 0;
+    padding: 10px 0;
     background-color: #201a7b !important;
     color: #fff !important;
 }
@@ -34,7 +34,9 @@ body {
 
 
 .logo-img {
-    width: 300px;
+    height: 10vh;
+    width: auto;
+
 }
 
 .navbar-toggler {
@@ -224,6 +226,10 @@ iframe {
     top: 370px;
 }
 
+.btn3 {
+    top: 440px;
+}
+
 .container-acessibilidade {
     position: fixed;
     top: 400px;
@@ -243,6 +249,10 @@ iframe {
 
 .fonte-maior {
     font-size: 25px !important;
+}
+
+.order1 {
+    order: 1;
 }
 
 
@@ -576,5 +586,9 @@ footer {
     }
     iframe {
         height: 40vh;
+    }
+    .logo-img {
+        height: 60px;
+        width: 60px;
     }
 }

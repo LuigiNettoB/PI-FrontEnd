@@ -109,3 +109,118 @@ app.get('/posts', async (req, res) => {
         res.status(400).json({ error: error.message });
     }
 });
+
+const visitaSchema = new mongoose.Schema({
+    visitas: { type: Number, default: 0 }
+});
+
+const Visita = mongoose.model('Visita', visitaSchema);
+
+// Rota para incrementar as visitas
+app.get('/incrementar-visita', async (req, res) => {
+    try {
+        // Encontrar o contador de visitas
+        const visita = await Visita.findOne();
+        
+        if (!visita) {
+            // Se não existir o contador, cria um com 0 visitas
+            const novoContador = new Visita({ visitas: 1 });
+            await novoContador.save();
+            return res.json({ visitas: 1 });
+        }
+        
+        // Se já existir, incrementa o contador de visitas
+        visita.visitas += 1;
+        await visita.save();
+        res.json({ visitas: visita.visitas });
+    } catch (err) {
+        console.error('Erro ao incrementar visita:', err);
+        res.status(500).send('Erro no servidor');
+    }
+});
+
+// Rota para obter o número de visitas
+app.get('/get-visitas', async (req, res) => {
+    try {
+        const visita = await Visita.findOne();
+        if (visita) {
+            return res.json({ visitas: visita.visitas });
+        }
+        res.json({ visitas: 0 });
+    } catch (err) {
+        console.error('Erro ao obter visitas:', err);
+        res.status(500).send('Erro no servidor');
+    }
+});
+
+const cliqueSchema = new mongoose.Schema({
+    cliques: { type: Number, default: 0 }
+  });
+  
+  const Clique = mongoose.model('Clique', cliqueSchema);
+  
+
+app.post('/incrementar-clique', async (req, res) => {
+    try {
+      let clique = await Clique.findOne();
+      if (!clique) {
+        clique = new Clique({ cliques: 1 });
+        await clique.save();
+      } else {
+        clique.cliques += 1;
+        await clique.save();
+      }
+      res.json({ cliques: clique.cliques });
+    } catch (err) {
+      console.error('Erro ao incrementar cliques:', err);
+      res.status(500).send('Erro no servidor');
+    }
+  });
+  
+
+  app.get('/get-cliques', async (req, res) => {
+    try {
+      const clique = await Clique.findOne();
+      if (clique) {
+        return res.json({ cliques: clique.cliques });
+      }
+      res.json({ cliques: 0 });
+    } catch (err) {
+      console.error('Erro ao obter cliques:', err);
+      res.status(500).send('Erro no servidor');
+    }
+  });
+
+  const enderecoSchema = new mongoose.Schema({
+    endereco: { type: String, required: true }
+  });
+  
+  const Endereco = mongoose.model('Endereco', enderecoSchema);
+  
+  // Rota para salvar o endereço
+  app.post('/salvar-endereco', async (req, res) => {
+    try {
+      const { endereco } = req.body;
+      const novoEndereco = new Endereco({ endereco });
+      await novoEndereco.save();
+      res.status(201).json({ message: 'Endereço salvo com sucesso!', endereco });
+    } catch (err) {
+      console.error('Erro ao salvar endereço:', err);
+      res.status(500).json({ message: 'Erro no servidor' });
+    }
+  });
+  
+  // Rota para obter o endereço
+  app.get('/obter-endereco', async (req, res) => {
+    try {
+      const endereco = await Endereco.findOne().sort({ _id: -1 }); // Obtém o último endereço salvo
+      if (endereco) {
+        return res.json({ endereco: endereco.endereco });
+      }
+      res.status(404).json({ message: 'Nenhum endereço encontrado' });
+    } catch (err) {
+      console.error('Erro ao obter endereço:', err);
+      res.status(500).json({ message: 'Erro no servidor' });
+    }
+  });
+  
