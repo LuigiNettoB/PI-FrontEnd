@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -230,4 +231,238 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento "Matemática no Metrô"</title>
+    <script src="https://kit.fontawesome.com/159f8739b6.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon-metro.png" type="image/x-icon">
+</head>
+<!-- <body class="pagina-admin" onclick="recuperarConteudo()"> -->
+    <body class="pagina-admin">
+    <nav class="container-fluid p-4">
+        <div class="row">
+            <div class="col-12">
+                <a href="inicio.html" class="painel-btn-voltar"><i class="fa-solid fa-chevron-left" style="font-size: 30px;"></i></a>
+            </div>
+        </div>
+    </nav>
+    <header class="col-md-10 m-auto painel-gerencia mb-5">
+        <div class="row">
+            <div class="col-12 mt-2">
+                <h1 class="text-center">Painel</h1>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-4 text-center">
+                <p id="contador"></p>
+            </div>
+            <div class="col-4 text-center">
+                <p><strong>Página mais visitada:</strong> <span id="numero-visitas">Início</span></p>
+            </div>
+            <div class="col-4 text-center">
+                <p id="contador-clique"></p>
+            </div>
+        </div>
+    </header>
+    <hr>
+    <main>
+        <hr>
+        <section class="col-10 m-auto mt-3">
+            <div class="row">
+                <div class="col-12 mt-2 mb-3">
+                    <h2 class="text-center">Localização e Horários</h2>
+                </div>
+            </div>
+            <div class="row">
+                <form action="" id="form-endereco">
+                    <div class="col-md-6 offset-md-3">
+                        <h4>Endereço:</h4>
+                        <div class="input-group mb-3">
+                            <input type="text" id="endereco" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Endereço do Projeto">
+                        </div>
+                    </div>
+                    <div class="col-md-6 offset-md-3">
+                        <h4>Horários:</h4>
+                        <table class="table table-striped text-center">
+                            <thead>
+                                <tr>
+                                    <th>Dia</th>
+                                    <th>Horário</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Domingo</td>
+                                    <td>
+                                        <div class="input-group input-group-sm mb-3">
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
+                                          </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Segunda</td>
+                                    <td>
+                                        <div class="input-group input-group-sm mb-3">
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
+                                          </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Terça</td>
+                                    <td>
+                                        <div class="input-group input-group-sm mb-3">
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
+                                          </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Quarta</td>
+                                    <td>
+                                        <div class="input-group input-group-sm mb-3">
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
+                                          </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Quinta</td>
+                                    <td>
+                                        <div class="input-group input-group-sm mb-3">
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
+                                          </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Sexta</td>
+                                    <td>
+                                        <div class="input-group input-group-sm mb-3">
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
+                                          </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Sábado</td>
+                                    <td>
+                                        <div class="input-group input-group-sm mb-3">
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ex: 14h-16h ou 'Fechado' ">
+                                          </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button type="submit" class="btn btn-outline-primary col-md-6 offset-md-3 mb-5">Alterar</button>
+                </form>
+            </div>
+        </section>
+        <hr>
+        <section class="col-md-10 m-auto mt-3 mb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center">Postagens</h2>
+                </div>
+                <div class="col-12 mt-4 ">
+                    
+                    <h4>Nova Postagem:</h4>
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Assunto"
+                                id="assunto_campo">
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="input-group">
+                                <textarea class="form-control" aria-label="With textarea" placeholder="Conteúdo" id="conteudo_campo"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary mb-5" type="button" onClick="adicionarPostagem()">Postar</button>
+                </div>
+            </div>
+        </section>
+        <hr>
+        
+    </main>
+    <script>
+        function atualizarContador() {
+            fetch('http://localhost:3000/get-visitas')  // Requisição para obter o número de visitas
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Número de visitas:', data.visitas);  // Verifique o que vem no console
+                    document.querySelector('#contador').textContent = `Número de visitas: ${data.visitas}`;
+                })
+                .catch(error => {
+                    console.error('Erro ao obter visitas:', error);
+                    document.querySelector('#contador').textContent = 'Erro ao carregar número de visitas.';
+                });
+        }
+
+        // Função para incrementar o contador de visitas ao carregar a página
+        function incrementarVisita() {
+            fetch('http://localhost:3000/incrementar-visita')  // Requisição para incrementar as visitas
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Visitas incrementadas:', data.visitas);  // Verifique se o contador foi incrementado
+                })
+                .catch(error => {
+                    console.error('Erro ao incrementar visitas:', error);
+                });
+        }
+
+        // Chamar as funções ao carregar a página
+        incrementarVisita();  // Incrementa a visita
+        atualizarContador();  // Atualiza o contador de visitas
+
+        function atualizarContadorClique() {
+            fetch('http://localhost:3000/get-cliques')
+                .then(response => response.json())
+                .then(data => {
+                    document.querySelector('#contador-clique').textContent = `Número de emails enviados: ${data.cliques}`;
+                })
+                .catch(error => {
+                    console.error('Erro ao obter número de cliques:', error);
+                    document.querySelector('#contador-clique').textContent = 'Erro ao carregar número de emails enviados.';
+                });
+        }
+
+        // Atualiza o contador ao carregar a página
+        atualizarContadorClique();
+
+        document.querySelector('#form-endereco').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const endereco = document.querySelector('#endereco').value;
+            
+            fetch('http://localhost:3000/salvar-endereco', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ endereco })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    alert(data.message);  // Exibe uma mensagem de sucesso
+                    document.querySelector('#endereco').value = ''; // Limpa o campo
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao salvar o endereço:', error);
+                alert('Erro ao salvar o endereço.');
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/frontend.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+</body>
+>>>>>>> 03c77a12ce59d30695e6182ea4313bd57724d3f4
 </html>
