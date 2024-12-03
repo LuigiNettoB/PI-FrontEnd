@@ -1,4 +1,4 @@
-const mongoose = require('./connection'); // Importando a conexão
+const mongoose = require('./connection'); 
 const UserSchema = new mongoose.Schema({
     username: { type: String, required: true, unique: true },
     password: { type: String, required: true },

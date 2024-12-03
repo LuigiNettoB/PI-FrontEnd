@@ -57,15 +57,15 @@ async function loadPosts() {
     const response = await fetch('http://localhost:3000/posts');
     let posts = await response.json();
 
-    // Converte o campo `data` para Date e filtra posts sem data válida
+   
     posts = posts
         .map(post => ({ ...post, data: new Date(post.data) }))
-        .filter(post => !isNaN(post.data)); // Remove posts com data inválida
+        .filter(post => !isNaN(post.data)); 
     
-    // Ordena os posts pela data do mais antigo para o mais recente
+    
     posts.sort((a, b) => b.data - a.data);
 
-    postsContainer.innerHTML = '';  // Limpa os posts existentes
+    postsContainer.innerHTML = '';  
     posts.forEach(post => {
         const postCard = document.createElement('div');
         postCard.classList.add('card', 'mb-3');
@@ -88,15 +88,15 @@ function alterarCor(tipo) {
 function aumentarFonte() {
     const elementos = document.querySelectorAll('body, h1, h2, h3, p');
 
-      // Para cada elemento, aumentar o tamanho da fonte
+      
       elementos.forEach(function(elemento) {
         const estiloAtual = window.getComputedStyle(elemento);
         const tamanhoFonteAtual = parseFloat(estiloAtual.fontSize);
 
-        // Aumenta o tamanho da fonte em 2px
+       
         const novoTamanhoFonte = tamanhoFonteAtual + 2;
 
-        // Aplica o novo tamanho ao elemento
+        
         elemento.style.fontSize = novoTamanhoFonte + 'px';
       });
 }
@@ -106,4 +106,3 @@ function lerPaginaInteira() {
      responsiveVoice.speak(textos, "Portuguese Female");
 }
 
-//VERSÃO PEDRO

@@ -17,8 +17,8 @@ app.use(cookieParser())
 app.use(express.json())
 
 const corsOptions = {
-    origin: 'http://127.0.0.1:5502', // Permita esta origem
-    credentials: true // Permite que cookies sejam enviados
+    origin: 'http://127.0.0.1:5502', 
+    credentials: true 
 }
 
 app.use(cors(corsOptions))
@@ -54,7 +54,7 @@ app.post('/logout', (req, res) => {
 })
 
 const port = process.env.PORT || 3000
-//const port = 3000
+
 
 app.listen(port, ()=> {
     console.log(`Servidor rodando na Porta ${port}`)
@@ -64,7 +64,7 @@ require("./connection")
 
 const mongoose = require('mongoose');
 
-// Definição do esquema de Postagem (Post)
+
 const PostSchema = new mongoose.Schema({
     assunto: { type: String, required: true },
     conteudo: { type: String, required: true },
@@ -73,16 +73,16 @@ const PostSchema = new mongoose.Schema({
 
 const Post = mongoose.model('Post', PostSchema);
 
-// Rota para criar uma nova postagem
+
 app.post('/posts', async (req, res) => {
     try {
         const { assunto, conteudo } = req.body;
         
-        // Cria um novo post com a data atual
+
         const newPost = new Post({
             assunto,
             conteudo,
-            data: Date.now()  // Gera a data e hora atual em milissegundos
+            data: Date.now()  
         });
 
         console.log('Novo post criado');
@@ -95,16 +95,11 @@ app.post('/posts', async (req, res) => {
 });
 
 
-// axios.post('http://127.0.0.1:3000/posts', {
-//     assunto: "",
-//     conteudo: ""
-// })
-// .then(response => console.log(response.data))
-// .catch(error => console.error(error));
+
 
 app.get('/posts', async (req, res) => {
     try {
-        const posts = await Post.find().sort({ date: -1 });  // Ordena por data, da mais recente para a mais antiga
+        const posts = await Post.find().sort({ date: -1 });  
         res.json(posts);
     } catch (error) {
         res.status(400).json({ error: error.message });
@@ -117,20 +112,20 @@ const visitaSchema = new mongoose.Schema({
 
 const Visita = mongoose.model('Visita', visitaSchema);
 
-// Rota para incrementar as visitas
+
 app.get('/incrementar-visita', async (req, res) => {
     try {
-        // Encontrar o contador de visitas
+        
         const visita = await Visita.findOne();
         
         if (!visita) {
-            // Se não existir o contador, cria um com 0 visitas
+            
             const novoContador = new Visita({ visitas: 1 });
             await novoContador.save();
             return res.json({ visitas: 1 });
         }
         
-        // Se já existir, incrementa o contador de visitas
+        
         visita.visitas += 1;
         await visita.save();
         res.json({ visitas: visita.visitas });
@@ -140,7 +135,7 @@ app.get('/incrementar-visita', async (req, res) => {
     }
 });
 
-// Rota para obter o número de visitas
+
 app.get('/get-visitas', async (req, res) => {
     try {
         const visita = await Visita.findOne();
@@ -198,7 +193,7 @@ app.post('/incrementar-clique', async (req, res) => {
   
   const Endereco = mongoose.model('Endereco', enderecoSchema);
   
-  // Rota para salvar o endereço
+  
   app.post('/salvar-endereco', async (req, res) => {
     try {
       const { endereco } = req.body;
@@ -211,7 +206,7 @@ app.post('/incrementar-clique', async (req, res) => {
     }
   });
   
-  // Rota para obter o endereço
+  
   app.get('/obter-endereco', async (req, res) => {
     try {
       const endereco = await Endereco.findOne().sort({ _id: -1 }); // Obtém o último endereço salvo
