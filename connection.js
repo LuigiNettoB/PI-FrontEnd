@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //mongodb+srv://pedronoelialamov:YCONLNiEQOOA5a64@cluster0.imjcz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 //mongodb+srv://${dbUser}:${dbPassword}@matematicametro.lf0ks.mongodb.net/matematicametro?retryWrites=true&w=majority&appName=MatematicaMetro
 const mongoose = require("mongoose")
@@ -21,30 +21,4 @@ const connect = () => {
 }
 
 connect()
-
-=======
-//mongodb+srv://pedronoelialamov:YCONLNiEQOOA5a64@cluster0.imjcz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-//mongodb+srv://${dbUser}:${dbPassword}@matematicametro.lf0ks.mongodb.net/matematicametro?retryWrites=true&w=majority&appName=MatematicaMetro
-const mongoose = require("mongoose")
-
-const dbUser = process.env.DB_USER
-const dbPassword = process.env.DB_PASS
-
-const connect = () => {
-    mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@matematicametro.lf0ks.mongodb.net/matematicametro?retryWrites=true&w=majority&appName=MatematicaMetro`)
-
-    const connection = mongoose.connection
-
-    connection.on("error", () => {
-        console.error("Erro ao conectar com o MongoDB")
-    })
-
-    connection.on("open", () => {
-        console.log("Conectado ao MongoDB com Sucesso!")
-    })
-}
-
-connect()
-
->>>>>>> 03c77a12ce59d30695e6182ea4313bd57724d3f4
 module.exports = mongoose
